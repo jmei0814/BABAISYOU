@@ -1,0 +1,5 @@
+#include <stdbool.h>
+void testLevel();
+void clearLevel();
+void sendVRAM();
+bool interact();

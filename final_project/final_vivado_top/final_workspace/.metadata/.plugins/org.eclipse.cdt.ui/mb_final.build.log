@@ -1,0 +1,732 @@
+14:55:21 **** Incremental Build of configuration Debug for project mb_final ****
+make all 
+'Building file: ../src/final_main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/final_main.o" -IC:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include -mno-xl-reorder -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/final_main.d" -MT"src/final_main.o" -o "src/final_main.o" "../src/final_main.c"
+In file included from ../src/hdmi_text_controller.h:8,
+                 from ../src/final_main.c:6:
+C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xparameters.h:627:50: warning: initialization of 'volatile struct TEXT_HDMI_STRUCT *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  627 | #define XPAR_HDMI_TEXT_CONTROLLER_0_AXI_BASEADDR 0x44A10000
+      |                                                  ^~~~~~~~~~
+../src/hdmi_text_controller.h:28:54: note: in expansion of macro 'XPAR_HDMI_TEXT_CONTROLLER_0_AXI_BASEADDR'
+   28 | static volatile struct TEXT_HDMI_STRUCT* hdmi_ctrl = XPAR_HDMI_TEXT_CONTROLLER_0_AXI_BASEADDR;
+      |                                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/final_main.c: In function 'keycodes':
+../src/final_main.c:106:17: warning: implicit declaration of function 'updateTick' [-Wimplicit-function-declaration]
+  106 |                 updateTick(key);
+      |                 ^~~~~~~~~~
+../src/final_main.c: In function 'testLevel':
+../src/final_main.c:243:12: warning: variable 'love' set but not used [-Wunused-but-set-variable]
+  243 |     object love;
+      |            ^~~~
+../src/final_main.c:240:12: warning: variable 'babaleft' set but not used [-Wunused-but-set-variable]
+  240 |     object babaleft;
+      |            ^~~~~~~~
+../src/final_main.c:239:12: warning: variable 'babadown' set but not used [-Wunused-but-set-variable]
+  239 |     object babadown;
+      |            ^~~~~~~~
+../src/final_main.c:238:12: warning: variable 'babaup' set but not used [-Wunused-but-set-variable]
+  238 |     object babaup;
+      |            ^~~~~~
+../src/final_main.c: At top level:
+../src/final_main.c:392:7: warning: conflicting types for 'updateTick'; have 'void(BYTE)' {aka 'void(unsigned char)'}
+  392 |  void updateTick(BYTE key){
+      |       ^~~~~~~~~~
+../src/final_main.c:106:17: note: previous implicit declaration of 'updateTick' with type 'void(BYTE)' {aka 'void(unsigned char)'}
+  106 |                 updateTick(key);
+      |                 ^~~~~~~~~~
+../src/final_main.c: In function 'updateTick':
+../src/final_main.c:394:18: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  394 |          strncpy(property, emptyprop, sizeof(property));
+      |                  ^~~~~~~~
+      |                  |
+      |                  uint8_t (*)[3] {aka unsigned char (*)[3]}
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:19: note: expected 'char * restrict' but argument is of type 'uint8_t (*)[3]' {aka 'unsigned char (*)[3]'}
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                   ^
+../src/final_main.c:394:28: warning: passing argument 2 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  394 |          strncpy(property, emptyprop, sizeof(property));
+      |                            ^~~~~~~~~
+      |                            |
+      |                            uint8_t (*)[3] {aka unsigned char (*)[3]}
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:37: note: expected 'const char * restrict' but argument is of type 'uint8_t (*)[3]' {aka 'unsigned char (*)[3]'}
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                                     ^
+../src/final_main.c:403:42: warning: implicit declaration of function 'checkStatement' [-Wimplicit-function-declaration]
+  403 |                                          checkStatement(x,y,i);
+      |                                          ^~~~~~~~~~~~~~
+../src/final_main.c:418:75: warning: implicit declaration of function 'updateMovement' [-Wimplicit-function-declaration]
+  418 |                                                                           updateMovement(x, y, i, key);
+      |                                                                           ^~~~~~~~~~~~~~
+../src/final_main.c:506:21: warning: implicit declaration of function 'interact' [-Wimplicit-function-declaration]
+  506 |                     interact(x,y,i);
+      |                     ^~~~~~~~
+../src/final_main.c: At top level:
+../src/final_main.c:521:6: warning: conflicting types for 'checkStatement'; have 'void(int,  int,  int)'
+  521 | void checkStatement(int x, int y, int layer){
+      |      ^~~~~~~~~~~~~~
+../src/final_main.c:403:42: note: previous implicit declaration of 'checkStatement' with type 'void(int,  int,  int)'
+  403 |                                          checkStatement(x,y,i);
+      |                                          ^~~~~~~~~~~~~~
+../src/final_main.c: In function 'checkStatement':
+../src/final_main.c:532:65: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  532 |                                                         strncpy(newProperty, property[17], sizeof(newProperty));
+      |                                                                 ^~~~~~~~~~~
+      |                                                                 |
+      |                                                                 int *
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:19: note: expected 'char * restrict' but argument is of type 'int *'
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                   ^
+../src/final_main.c:532:86: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
+  532 |                                                         strncpy(newProperty, property[17], sizeof(newProperty));
+      |                                                                              ~~~~~~~~^~~~
+      |                                                                                      |
+      |                                                                                      uint8_t * {aka unsigned char *}
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:37: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                                     ^
+../src/final_main.c:551:65: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  551 |                                                         strncpy(newProperty, property[22], sizeof(newProperty));
+      |                                                                 ^~~~~~~~~~~
+      |                                                                 |
+      |                                                                 int *
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:19: note: expected 'char * restrict' but argument is of type 'int *'
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                   ^
+../src/final_main.c:551:86: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
+  551 |                                                         strncpy(newProperty, property[22], sizeof(newProperty));
+      |                                                                              ~~~~~~~~^~~~
+      |                                                                                      |
+      |                                                                                      uint8_t * {aka unsigned char *}
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:37: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                                     ^
+../src/final_main.c:568:65: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  568 |                                                         strncpy(newProperty, property[21], sizeof(newProperty));
+      |                                                                 ^~~~~~~~~~~
+      |                                                                 |
+      |                                                                 int *
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:19: note: expected 'char * restrict' but argument is of type 'int *'
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                   ^
+../src/final_main.c:568:86: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
+  568 |                                                         strncpy(newProperty, property[21], sizeof(newProperty));
+      |                                                                              ~~~~~~~~^~~~
+      |                                                                                      |
+      |                                                                                      uint8_t * {aka unsigned char *}
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:37: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                                     ^
+../src/final_main.c:585:65: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  585 |                                                         strncpy(newProperty, property[23], sizeof(newProperty));
+      |                                                                 ^~~~~~~~~~~
+      |                                                                 |
+      |                                                                 int *
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:19: note: expected 'char * restrict' but argument is of type 'int *'
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                   ^
+../src/final_main.c:585:86: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
+  585 |                                                         strncpy(newProperty, property[23], sizeof(newProperty));
+      |                                                                              ~~~~~~~~^~~~
+      |                                                                                      |
+      |                                                                                      uint8_t * {aka unsigned char *}
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:37: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                                     ^
+../src/final_main.c:602:65: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  602 |                                                         strncpy(newProperty, property[24], sizeof(newProperty));
+      |                                                                 ^~~~~~~~~~~
+      |                                                                 |
+      |                                                                 int *
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:19: note: expected 'char * restrict' but argument is of type 'int *'
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                   ^
+../src/final_main.c:602:86: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
+  602 |                                                         strncpy(newProperty, property[24], sizeof(newProperty));
+      |                                                                              ~~~~~~~~^~~~
+      |                                                                                      |
+      |                                                                                      uint8_t * {aka unsigned char *}
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:37: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                                     ^
+../src/final_main.c:619:65: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  619 |                                                         strncpy(newProperty, property[25], sizeof(newProperty));
+      |                                                                 ^~~~~~~~~~~
+      |                                                                 |
+      |                                                                 int *
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:19: note: expected 'char * restrict' but argument is of type 'int *'
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                   ^
+../src/final_main.c:619:86: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
+  619 |                                                         strncpy(newProperty, property[25], sizeof(newProperty));
+      |                                                                              ~~~~~~~~^~~~
+      |                                                                                      |
+      |                                                                                      uint8_t * {aka unsigned char *}
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:37: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                                     ^
+../src/final_main.c:526:45: warning: unused variable 'newProperty' [-Wunused-variable]
+  526 |                                         int newProperty[numprop];
+      |                                             ^~~~~~~~~~~
+../src/final_main.c:651:65: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  651 |                                                         strncpy(newProperty, property[17], sizeof(newProperty));
+      |                                                                 ^~~~~~~~~~~
+      |                                                                 |
+      |                                                                 int *
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:19: note: expected 'char * restrict' but argument is of type 'int *'
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                   ^
+../src/final_main.c:651:86: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
+  651 |                                                         strncpy(newProperty, property[17], sizeof(newProperty));
+      |                                                                              ~~~~~~~~^~~~
+      |                                                                                      |
+      |                                                                                      uint8_t * {aka unsigned char *}
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:37: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                                     ^
+../src/final_main.c:670:65: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  670 |                                                         strncpy(newProperty, property[22], sizeof(newProperty));
+      |                                                                 ^~~~~~~~~~~
+      |                                                                 |
+      |                                                                 int *
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:19: note: expected 'char * restrict' but argument is of type 'int *'
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                   ^
+../src/final_main.c:670:86: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
+  670 |                                                         strncpy(newProperty, property[22], sizeof(newProperty));
+      |                                                                              ~~~~~~~~^~~~
+      |                                                                                      |
+      |                                                                                      uint8_t * {aka unsigned char *}
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:37: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                                     ^
+../src/final_main.c:687:65: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  687 |                                                         strncpy(newProperty, property[21], sizeof(newProperty));
+      |                                                                 ^~~~~~~~~~~
+      |                                                                 |
+      |                                                                 int *
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:19: note: expected 'char * restrict' but argument is of type 'int *'
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                   ^
+../src/final_main.c:687:86: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
+  687 |                                                         strncpy(newProperty, property[21], sizeof(newProperty));
+      |                                                                              ~~~~~~~~^~~~
+      |                                                                                      |
+      |                                                                                      uint8_t * {aka unsigned char *}
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:37: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                                     ^
+../src/final_main.c:704:65: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  704 |                                                         strncpy(newProperty, property[23], sizeof(newProperty));
+      |                                                                 ^~~~~~~~~~~
+      |                                                                 |
+      |                                                                 int *
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:19: note: expected 'char * restrict' but argument is of type 'int *'
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                   ^
+../src/final_main.c:704:86: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
+  704 |                                                         strncpy(newProperty, property[23], sizeof(newProperty));
+      |                                                                              ~~~~~~~~^~~~
+      |                                                                                      |
+      |                                                                                      uint8_t * {aka unsigned char *}
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:37: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                                     ^
+../src/final_main.c:721:65: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  721 |                                                         strncpy(newProperty, property[24], sizeof(newProperty));
+      |                                                                 ^~~~~~~~~~~
+      |                                                                 |
+      |                                                                 int *
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:19: note: expected 'char * restrict' but argument is of type 'int *'
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                   ^
+../src/final_main.c:721:86: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
+  721 |                                                         strncpy(newProperty, property[24], sizeof(newProperty));
+      |                                                                              ~~~~~~~~^~~~
+      |                                                                                      |
+      |                                                                                      uint8_t * {aka unsigned char *}
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:37: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                                     ^
+../src/final_main.c:738:65: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  738 |                                                         strncpy(newProperty, property[25], sizeof(newProperty));
+      |                                                                 ^~~~~~~~~~~
+      |                                                                 |
+      |                                                                 int *
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:19: note: expected 'char * restrict' but argument is of type 'int *'
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                   ^
+../src/final_main.c:738:86: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
+  738 |                                                         strncpy(newProperty, property[25], sizeof(newProperty));
+      |                                                                              ~~~~~~~~^~~~
+      |                                                                                      |
+      |                                                                                      uint8_t * {aka unsigned char *}
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:37: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                                     ^
+../src/final_main.c:771:65: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  771 |                                                         strncpy(newProperty, property[17], sizeof(newProperty));
+      |                                                                 ^~~~~~~~~~~
+      |                                                                 |
+      |                                                                 int *
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:19: note: expected 'char * restrict' but argument is of type 'int *'
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                   ^
+../src/final_main.c:771:86: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
+  771 |                                                         strncpy(newProperty, property[17], sizeof(newProperty));
+      |                                                                              ~~~~~~~~^~~~
+      |                                                                                      |
+      |                                                                                      uint8_t * {aka unsigned char *}
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:37: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                                     ^
+../src/final_main.c:790:65: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  790 |                                                         strncpy(newProperty, property[22], sizeof(newProperty));
+      |                                                                 ^~~~~~~~~~~
+      |                                                                 |
+      |                                                                 int *
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:19: note: expected 'char * restrict' but argument is of type 'int *'
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                   ^
+../src/final_main.c:790:86: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
+  790 |                                                         strncpy(newProperty, property[22], sizeof(newProperty));
+      |                                                                              ~~~~~~~~^~~~
+      |                                                                                      |
+      |                                                                                      uint8_t * {aka unsigned char *}
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:37: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                                     ^
+../src/final_main.c:807:65: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  807 |                                                         strncpy(newProperty, property[21], sizeof(newProperty));
+      |                                                                 ^~~~~~~~~~~
+      |                                                                 |
+      |                                                                 int *
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:19: note: expected 'char * restrict' but argument is of type 'int *'
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                   ^
+../src/final_main.c:807:86: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
+  807 |                                                         strncpy(newProperty, property[21], sizeof(newProperty));
+      |                                                                              ~~~~~~~~^~~~
+      |                                                                                      |
+      |                                                                                      uint8_t * {aka unsigned char *}
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:37: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                                     ^
+../src/final_main.c:824:65: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  824 |                                                         strncpy(newProperty, property[23], sizeof(newProperty));
+      |                                                                 ^~~~~~~~~~~
+      |                                                                 |
+      |                                                                 int *
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:19: note: expected 'char * restrict' but argument is of type 'int *'
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                   ^
+../src/final_main.c:824:86: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
+  824 |                                                         strncpy(newProperty, property[23], sizeof(newProperty));
+      |                                                                              ~~~~~~~~^~~~
+      |                                                                                      |
+      |                                                                                      uint8_t * {aka unsigned char *}
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:37: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                                     ^
+../src/final_main.c:841:65: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  841 |                                                         strncpy(newProperty, property[24], sizeof(newProperty));
+      |                                                                 ^~~~~~~~~~~
+      |                                                                 |
+      |                                                                 int *
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:19: note: expected 'char * restrict' but argument is of type 'int *'
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                   ^
+../src/final_main.c:841:86: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
+  841 |                                                         strncpy(newProperty, property[24], sizeof(newProperty));
+      |                                                                              ~~~~~~~~^~~~
+      |                                                                                      |
+      |                                                                                      uint8_t * {aka unsigned char *}
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:37: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                                     ^
+../src/final_main.c:858:65: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  858 |                                                         strncpy(newProperty, property[25], sizeof(newProperty));
+      |                                                                 ^~~~~~~~~~~
+      |                                                                 |
+      |                                                                 int *
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:19: note: expected 'char * restrict' but argument is of type 'int *'
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                   ^
+../src/final_main.c:858:86: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
+  858 |                                                         strncpy(newProperty, property[25], sizeof(newProperty));
+      |                                                                              ~~~~~~~~^~~~
+      |                                                                                      |
+      |                                                                                      uint8_t * {aka unsigned char *}
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:37: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                                     ^
+../src/final_main.c:765:45: warning: unused variable 'newProperty' [-Wunused-variable]
+  765 |                                         int newProperty[numprop];
+      |                                             ^~~~~~~~~~~
+../src/final_main.c:890:65: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  890 |                                                         strncpy(newProperty, property[17], sizeof(newProperty));
+      |                                                                 ^~~~~~~~~~~
+      |                                                                 |
+      |                                                                 int *
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:19: note: expected 'char * restrict' but argument is of type 'int *'
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                   ^
+../src/final_main.c:890:86: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
+  890 |                                                         strncpy(newProperty, property[17], sizeof(newProperty));
+      |                                                                              ~~~~~~~~^~~~
+      |                                                                                      |
+      |                                                                                      uint8_t * {aka unsigned char *}
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:37: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                                     ^
+../src/final_main.c:909:65: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  909 |                                                         strncpy(newProperty, property[22], sizeof(newProperty));
+      |                                                                 ^~~~~~~~~~~
+      |                                                                 |
+      |                                                                 int *
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:19: note: expected 'char * restrict' but argument is of type 'int *'
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                   ^
+../src/final_main.c:909:86: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
+  909 |                                                         strncpy(newProperty, property[22], sizeof(newProperty));
+      |                                                                              ~~~~~~~~^~~~
+      |                                                                                      |
+      |                                                                                      uint8_t * {aka unsigned char *}
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:37: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                                     ^
+../src/final_main.c:926:65: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  926 |                                                         strncpy(newProperty, property[21], sizeof(newProperty));
+      |                                                                 ^~~~~~~~~~~
+      |                                                                 |
+      |                                                                 int *
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:19: note: expected 'char * restrict' but argument is of type 'int *'
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                   ^
+../src/final_main.c:926:86: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
+  926 |                                                         strncpy(newProperty, property[21], sizeof(newProperty));
+      |                                                                              ~~~~~~~~^~~~
+      |                                                                                      |
+      |                                                                                      uint8_t * {aka unsigned char *}
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:37: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                                     ^
+../src/final_main.c:943:65: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  943 |                                                         strncpy(newProperty, property[23], sizeof(newProperty));
+      |                                                                 ^~~~~~~~~~~
+      |                                                                 |
+      |                                                                 int *
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:19: note: expected 'char * restrict' but argument is of type 'int *'
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                   ^
+../src/final_main.c:943:86: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
+  943 |                                                         strncpy(newProperty, property[23], sizeof(newProperty));
+      |                                                                              ~~~~~~~~^~~~
+      |                                                                                      |
+      |                                                                                      uint8_t * {aka unsigned char *}
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:37: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                                     ^
+../src/final_main.c:960:65: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  960 |                                                         strncpy(newProperty, property[24], sizeof(newProperty));
+      |                                                                 ^~~~~~~~~~~
+      |                                                                 |
+      |                                                                 int *
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:19: note: expected 'char * restrict' but argument is of type 'int *'
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                   ^
+../src/final_main.c:960:86: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
+  960 |                                                         strncpy(newProperty, property[24], sizeof(newProperty));
+      |                                                                              ~~~~~~~~^~~~
+      |                                                                                      |
+      |                                                                                      uint8_t * {aka unsigned char *}
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:37: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                                     ^
+../src/final_main.c:977:65: warning: passing argument 1 of 'strncpy' from incompatible pointer type [-Wincompatible-pointer-types]
+  977 |                                                         strncpy(newProperty, property[25], sizeof(newProperty));
+      |                                                                 ^~~~~~~~~~~
+      |                                                                 |
+      |                                                                 int *
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:19: note: expected 'char * restrict' but argument is of type 'int *'
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                   ^
+../src/final_main.c:977:86: warning: pointer targets in passing argument 2 of 'strncpy' differ in signedness [-Wpointer-sign]
+  977 |                                                         strncpy(newProperty, property[25], sizeof(newProperty));
+      |                                                                              ~~~~~~~~^~~~
+      |                                                                                      |
+      |                                                                                      uint8_t * {aka unsigned char *}
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:37: note: expected 'const char * restrict' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |                                     ^
+../src/final_main.c: At top level:
+../src/final_main.c:1002:6: warning: conflicting types for 'interact'; have 'void(int,  int,  int)'
+ 1002 | void interact(int x, int y, int layer){
+      |      ^~~~~~~~
+../src/final_main.c:506:21: note: previous implicit declaration of 'interact' with type 'void(int,  int,  int)'
+  506 |                     interact(x,y,i);
+      |                     ^~~~~~~~
+../src/final_main.c:1075:6: warning: conflicting types for 'updateMovement'; have 'void(int,  int,  int,  BYTE)' {aka 'void(int,  int,  int,  unsigned char)'}
+ 1075 | void updateMovement(int x, int y, int layer, BYTE key){
+      |      ^~~~~~~~~~~~~~
+../src/final_main.c:418:75: note: previous implicit declaration of 'updateMovement' with type 'void(int,  int,  int,  BYTE)' {aka 'void(int,  int,  int,  unsigned char)'}
+  418 |                                                                           updateMovement(x, y, i, key);
+      |                                                                           ^~~~~~~~~~~~~~
+../src/final_main.c: In function 'updateMovement':
+../src/final_main.c:1098:13: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+ 1098 |             if (isBaba) level[x][y][layer].ID = 17;
+      |             ^~
+../src/final_main.c:1099:25: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+ 1099 |                         while(currY >= 0){ //as long as the object isn't past the level edge
+      |                         ^~~~~
+../src/final_main.c:1148:13: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+ 1148 |             if (isBaba) level[x][y][layer].ID = 18;
+      |             ^~
+../src/final_main.c:1149:25: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+ 1149 |                         while(currY < levelHeight){ //as long as the object isn't past the level edge
+      |                         ^~~~~
+../src/final_main.c:1198:13: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+ 1198 |             if (isBaba) level[x][y][layer].ID = 19;
+      |             ^~
+../src/final_main.c:1199:25: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+ 1199 |                         while(currX >= 0){ //as long as the object isn't past the level edge
+      |                         ^~~~~
+../src/final_main.c:1248:13: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+ 1248 |             if (isBaba) level[x][y][layer].ID = 20;
+      |             ^~
+../src/final_main.c:1249:25: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+ 1249 |                         while(currX < levelWidth){ //as long as the object isn't past the level edge
+      |                         ^~~~~
+../src/final_main.c:1080:16: warning: variable 'empty' set but not used [-Wunused-but-set-variable]
+ 1080 |         object empty;
+      |                ^~~~~
+../src/final_main.c: In function 'updateTick':
+../src/final_main.c:394:10: warning: 'emptyprop' is used uninitialized [-Wuninitialized]
+  394 |          strncpy(property, emptyprop, sizeof(property));
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:13,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/xil_io.h:49,
+                 from C:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bspinclude/include/sleep.h:42,
+                 from ../src/final_main.c:15:
+c:\xilinx\vitis\2022.2\gnu\microblaze\nt\microblazeeb-xilinx-elf\usr\include\string.h:44:10: note: by argument 2 of type 'const char * restrict' to 'strncpy' declared here
+   44 | char    *strncpy (char *__restrict, const char *__restrict, size_t);
+      |          ^~~~~~~
+../src/final_main.c:393:18: note: 'emptyprop' declared here
+  393 |          uint8_t emptyprop[32][numprop];
+      |                  ^~~~~~~~~
+'Finished building: ../src/final_main.c'
+' '
+'Building target: mb_final.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/Taowei/Documents/ECE385/final_project/final_workspace/mb_final_top/export/mb_final_top/sw/mb_final_top/standalone_microblaze_0/bsplib/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v11.0 -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mb_final.elf"  ./src/lw_usb/HID.o ./src/lw_usb/MAX3421E.o ./src/lw_usb/transfer.o  ./src/final_main.o ./src/lw_usb_main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mb_final.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size mb_final.elf  |tee "mb_final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  46924	    500	   5448	  52872	   ce88	mb_final.elf
+'Finished building: mb_final.elf.size'
+' '
+
+14:55:22 Build Finished (took 1s.348ms)
+
